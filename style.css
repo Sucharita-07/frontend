@@ -1,3 +1,4 @@
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -5,33 +6,47 @@
     font-family: Arial, sans-serif;
 }
 
+/* ===== BODY BACKGROUND (URL IMAGE) ===== */
 body {
     height: 100vh;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    margin: 0;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20201012/pngtree-white-cloud-on-blue-sky-weather-background-image_410050.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.6s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* ===== APP CONTAINER ===== */
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.92); /* semi-transparent */
     padding: 25px;
-    border-radius: 10px;
-    width: 360px;
+    border-radius: 12px;
+    width: 370px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
+/* ===== TITLE ===== */
+h1 {
+    margin-bottom: 10px;
+}
+
+/* ===== LOCATION BUTTON ===== */
 .location-btn {
     background: #2ecc71;
     color: white;
     border: none;
-    padding: 7px 12px;
-    border-radius: 5px;
+    padding: 7px 14px;
+    border-radius: 6px;
     cursor: pointer;
     margin-bottom: 10px;
 }
 
+/* ===== SEARCH BOX ===== */
 .search-box {
     display: flex;
     margin: 10px 0;
@@ -40,20 +55,28 @@ body {
 .search-box input {
     flex: 1;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 1px solid #ccc;
 }
 
 .search-box button {
     margin-left: 8px;
-    padding: 8px 12px;
+    padding: 8px 14px;
     background: #4facfe;
     border: none;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
 
+/* ===== ERROR MESSAGE ===== */
+.error {
+    color: red;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+/* ===== WEATHER CARD ===== */
 .weather-card {
     display: none;
     margin-top: 15px;
@@ -63,25 +86,36 @@ body {
     width: 80px;
 }
 
+/* ===== DETAILS ===== */
 .details {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-}
-
-.error {
-    color: red;
     margin-top: 8px;
 }
 
-.suggestion {
-    margin-top: 8px;
-    padding: 8px;
-    background: #f1f9ff;
-    border-radius: 5px;
+/* ===== EXTRA INFO ===== */
+#rainProb,
+#climateProb,
+#season {
+    margin-top: 6px;
     font-size: 14px;
 }
 
+/* ===== SUGGESTION BOX ===== */
+.suggestion {
+    margin-top: 10px;
+    padding: 8px;
+    background: #f1f9ff;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* ===== CHART ===== */
 canvas {
     margin-top: 15px;
 }
+
+/* ===== OPTIONAL: WEATHER-BASED IMAGE SWITCHING ===== */
+.sunny {
+    background-image: url(

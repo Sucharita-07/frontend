@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Weather App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>🌦️ Weather App</h1>
+
+    <button class="location-btn" onclick="getUserLocation()">
+        📍 Use My Location
+    </button>
+
+    <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div id="error" class="error"></div>
+
+    <div class="weather-card" id="weatherCard">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon">
+        <h1 id="temperature"></h1>
+        <p id="description"></p>
+
+        <div class="details">
+            <p>Humidity: <span id="humidity"></span>%</p>
+            <p>Wind: <span id="wind"></span> km/h</p>
+        </div>
+
+        <p id="rainProb"></p>
+        <p id="climateProb"></p>
+        <p id="season"></p>
+        <p id="suggestion" class="suggestion"></p>
+
+        <!-- Probability Chart -->
+        <canvas id="weatherChart"></canvas>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
